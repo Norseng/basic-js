@@ -68,7 +68,7 @@ const {
       key = key.toUpperCase().split('');
       let result = '';
       let indexKey = [];
-      let j = 0
+      let j = 0;
       let messageIndex = 0;
       while (message.length != indexKey.length) {
         if (this.abc.indexOf(message[messageIndex]) === -1) {
@@ -79,20 +79,20 @@ const {
         }
         j++
         messageIndex++
-        if (j === key.length) j = 0
+        if (j === key.length) j = 0;
       }
       for (let i = 0; i < message.length; i++) {
         if (this.abc.indexOf(message[i]) !== -1) {
-          console.log(this.abc.indexOf(indexKey[i]) - this.abc.indexOf(message[i] + 4))
-          result += this.abc[this.abc.indexOf(message[i]) + 26 - this.abc.indexOf(indexKey[i])]
+          console.log(this.abc.indexOf(indexKey[i]) - this.abc.indexOf(message[i] + 4));
+          result += this.abc[this.abc.indexOf(message[i]) + 26 - this.abc.indexOf(indexKey[i])];
         } else {
-          result += message[i]
+          result += message[i];
         }
       }
       if(this.type === false){
-        return result.split('').reverse().join('')
+        return result.split('').reverse().join('');
       }else{
-        return result
+        return result;
       }
       
     } else {
